@@ -1,0 +1,1336 @@
+<!-- -*- coding: utf-8 -*- -->
+<PropertyList>
+ <path>tu134.ac</path>
+ <texture-path>../Texture</texture-path>
+ <offsets>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0</z-m>
+ </offsets>
+ 
+ <model>
+   <name>light</name>
+   <path>Aircraft/tu134/Model/light.xml</path>
+   <offsets>
+     <x-m>-23.15</x-m>
+     <y-m>0.0</y-m>
+     <z-m>0.99</z-m>
+   </offsets>
+</model>
+
+ <model>
+   <name>Cabina</name>
+   <path>Aircraft/tu134/Model/cabina.xml</path>
+ </model>
+ 
+<!--Анимация вращения колес -->
+<animation>
+ <type>spin</type>
+ <condition>
+	 <property>gear/gear[0]/compression-norm</property>
+ </condition>
+ <object-name>Nose_Wheel</object-name>
+ <property>velocities/groundspeed-kt</property>
+ <factor>-16.35</factor>
+ <center>
+  <x-m>4.179</x-m>
+  <y-m>0.00</y-m>
+  <z-m>-1.642</z-m>
+ </center>
+ <axis>
+  <x>0</x>
+  <y>1</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+<animation>
+	<type>spin</type>
+	<object-name>kolesor1</object-name>
+	<property>velocities/groundspeed-kt</property>
+	<factor>-16.35</factor>
+	<center>
+		<x-m>20.374</x-m>
+		<y-m>5.370</y-m>
+		<z-m>-1.682</z-m>
+	</center>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<!-- Анимация уборки шасси -->
+<!-- Носовая стойка -->
+<animation>
+	<type>rotate</type>
+	<object-name>NGear</object-name>
+	<property>gear/gear[1]/position-norm</property>
+	
+	<interpolation>
+		<entry><ind>    0.1</ind><dep>   -90.0</dep></entry>
+		<entry><ind>    0.9</ind><dep>   0.0</dep></entry>
+	</interpolation>
+	<center>
+		<x-m>4.024</x-m>
+		<y-m>0.349</y-m>
+		<z-m>0.0</z-m>
+	</center>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+  	</axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>NPodkos</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <interpolation>
+    <entry><ind>    0.1</ind><dep>   -17.5</dep></entry>
+    <entry><ind>    0.2</ind><dep>   -36.5</dep></entry>
+    <entry><ind>    0.4</ind><dep>   -37.8</dep></entry>
+    <entry><ind>    0.6</ind><dep>   -33.3</dep></entry>
+    <entry><ind>    0.8</ind><dep>   -22.3</dep></entry>
+    <entry><ind>    0.9</ind><dep>   0.0</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>4.121</x-m>
+    <y-m>-0.049</y-m>
+    <z-m>-0.923</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>NPodkos2</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <interpolation>
+    <entry><ind>    0.1</ind><dep>   64</dep></entry>
+    <entry><ind>    0.2</ind><dep>   45.3</dep></entry>
+    <entry><ind>    0.4</ind><dep>   35.7</dep></entry>
+    <entry><ind>    0.6</ind><dep>   28.8</dep></entry>
+    <entry><ind>    0.8</ind><dep>   18.8</dep></entry>
+    <entry><ind>    0.9</ind><dep>   0.0</dep></entry>
+  </interpolation>
+  <!--<interpolation>
+    <entry><ind>    0.1</ind><dep>   -90.0</dep></entry>
+    <entry><ind>    0.9</ind><dep>   0.0</dep></entry>
+  </interpolation>-->
+  <center>
+    <x-m>5.153</x-m>
+    <y-m>-0.0</y-m>
+    <z-m>0.152</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<!-- Правая стойка -->
+<animation>
+  <type>rotate</type>
+  <object-name>RGear</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <interpolation>
+    <entry><ind>    0.1</ind><dep>   -73.0</dep></entry>
+    <entry><ind>    0.9</ind><dep>   0.0</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>20.371</x-m>
+    <y-m>4.879</y-m>
+    <z-m>-0.148</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>base.152.1</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <interpolation>
+    <entry><ind>	0.1</ind>	<dep>	-0.195</dep></entry>
+    <entry><ind>        0.2</ind>       <dep>   0.795</dep></entry>
+    <entry><ind>        0.3</ind>       <dep>   0.721</dep></entry>
+    <entry><ind>        0.4</ind>       <dep>   0.652</dep></entry>
+    <entry><ind>        0.5</ind>       <dep>   0.538</dep></entry>
+    <entry><ind>        0.6</ind>       <dep>   0.425</dep></entry>
+    <entry><ind>        0.7</ind>       <dep>   0.29</dep></entry>
+    <entry><ind>        0.8</ind>       <dep>   0.15</dep></entry>
+    <entry><ind>	0.9</ind>	<dep>	0.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>base.152.1</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <interpolation>
+    <entry><ind>	0.1</ind>	<dep>	0.200</dep></entry>
+    <entry><ind>        0.2</ind>       <dep>   -0.407</dep></entry>
+    <entry><ind>        0.3</ind>       <dep>   -0.373</dep></entry>
+    <entry><ind>        0.4</ind>       <dep>   -0.331</dep></entry>
+    <entry><ind>        0.5</ind>       <dep>   -0.275</dep></entry>
+    <entry><ind>        0.6</ind>       <dep>   -0.215</dep></entry>
+    <entry><ind>        0.7</ind>       <dep>   -0.15</dep></entry>
+    <entry><ind>        0.8</ind>       <dep>   -0.075</dep></entry>
+    <entry><ind>	0.9</ind>	<dep>	0.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>1.0</z>
+  </axis>
+</animation>
+
+<!-- Передний щиток правой стойки -->
+<animation>
+  <type>rotate</type>
+  <object-name>RClose</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <interpolation>
+    <entry><ind>    0.1</ind><dep>   -20.0</dep></entry>
+    <entry><ind>    0.2</ind><dep>   -19.5</dep></entry>
+    <entry><ind>    0.3</ind><dep>   -16.6</dep></entry>
+    <entry><ind>    0.4</ind><dep>   -13.3</dep></entry>
+    <entry><ind>    0.5</ind><dep>   -10.5</dep></entry>
+    <entry><ind>    0.6</ind><dep>   -7.4</dep></entry>
+    <entry><ind>    0.7</ind><dep>   -5.0</dep></entry>
+    <entry><ind>    0.8</ind><dep>   -2.0</dep></entry>
+    <entry><ind>    0.9</ind><dep>   0.0</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>18.267</x-m>
+    <y-m>4.988</y-m>
+    <z-m>-0.349</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- Тележка правой стойки при уборке -->
+<animation>
+  <type>rotate</type>
+  <object-name>RTang</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <interpolation>
+    <entry><ind>    0.5</ind><dep>   -105</dep></entry>
+    <entry><ind>    0.95</ind><dep>   0.0</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>20.864</x-m>
+    <y-m>4.948</y-m>
+    <z-m>-1.607</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- Задний правый шиток правой стойки -->
+<animation>
+  <type>rotate</type>
+  <object-name>rrear.1</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
+    <entry><ind>	0.1</ind>	<dep>	90.0</dep></entry>
+    <entry><ind>	0.9</ind>	<dep>	90.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	0.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x1-m>21.256</x1-m>
+    <y1-m>5.421</y1-m>
+    <z1-m>-0.495</z1-m>
+    <x2-m>22.683</x2-m>
+    <y2-m>5.404</y2-m>
+    <z2-m>-0.463</z2-m>
+  </axis>
+</animation>
+
+<!-- Средний правый щиток правой стойки -->
+<animation>
+  <type>rotate</type>
+  <object-name>rcenter.1</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
+    <entry><ind>	0.1</ind>	<dep>	90.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	90.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x1-m>19.936</x1-m>
+    <y1-m>5.203</y1-m>
+    <z1-m>-0.560</z1-m>
+    <x2-m>20.726</x2-m>
+    <y2-m>5.203</y2-m>
+    <z2-m>-0.600</z2-m>
+  </axis>
+</animation>
+
+<!--<animation>
+  <type>rotate</type>
+  <object-name>rtang</object-name>
+  <property>tu134/gear/gear[2]/position3</property>
+  <interpolation>
+    <entry><ind>    0.0</ind><dep>   -18.29</dep></entry>
+    <entry><ind>    1.0</ind><dep>   0.0</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>20.269</x-m>
+    <y-m>4.883</y-m>
+    <z-m>-1.243</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>-->
+
+<!-- Левая стойка - шиток -->
+<animation>
+  <type>rotate</type>
+  <object-name>RFirst</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
+    <entry><ind>	0.1</ind>	<dep>	0.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	27.95</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>17.536</x-m>
+    <y-m>-4.859</y-m>
+    <z-m>-0.471</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+
+<!-- Носовая стойка - амортизатор -->
+<animation>
+	<type>translate</type>
+	<object-name>Nose_Amort_1</object-name>
+	<property>gear/gear[0]/compression-norm</property>
+	<interpolation>
+		<entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
+		<entry><ind>	1.0</ind>	<dep>	0.390</dep></entry>
+	</interpolation>
+	<axis>
+		<x>0.003</x>
+		<y>0.0</y>
+		<z>0.69</z>
+	</axis>
+</animation>
+
+<!-- Правая стойка - амортизатор -->
+<animation>
+  <type>translate</type>
+  <object-name>RAmort</object-name>
+  <property>gear/gear[2]/compression-1</property>
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	0.275</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-0.275</x>
+    <y>0.0</y>
+    <z>1.0</z>
+  </axis>
+</animation>
+
+<!-- Нижний элемент правой стойки -->
+<animation>
+  <type>rotate</type>
+  <object-name>ramort1</object-name>
+  <property>gear/gear[2]/compression-1</property>
+  <interpolation>
+    <entry><ind>    0.0</ind><dep>   0.0</dep></entry>
+    <entry><ind>    1.0</ind><dep>   -37.0</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>20.645</x-m>
+    <y-m>4.931</y-m>
+    <z-m>-1.472</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- Верхний элемент правой стойки -->
+<animation>
+  <type>rotate</type>
+  <object-name>ramort2</object-name>
+  <property>gear/gear[2]/compression-1</property>
+  <interpolation>
+    <entry><ind>    0.0</ind><dep>   0.0</dep></entry>
+    <entry><ind>    1.0</ind><dep>   27.0</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>20.459</x-m>
+    <y-m>4.923</y-m>
+    <z-m>-1.070</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- Правая стойка при обжатии -->
+<animation>
+  <type>rotate</type>
+  <object-name>RGear</object-name>
+  <property>gear/gear[2]/compression-1</property>
+  <interpolation>
+    <entry><ind>    0.0</ind><dep>   0.0</dep></entry>
+    <entry><ind>    1.0</ind><dep>   -9.0</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>20.371</x-m>
+    <y-m>4.879</y-m>
+    <z-m>-0.148</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- Тележка правой стойки при обжатии -->
+<animation>
+  <type>rotate</type>
+  <object-name>RTang</object-name>
+  <property>gear/gear[2]/compression-1</property>
+  <interpolation>
+    <entry><ind>    0.0</ind><dep>   0.0</dep></entry>
+    <entry><ind>    1.0</ind><dep>   9.0</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>20.864</x-m>
+    <y-m>4.948</y-m>
+    <z-m>-1.607</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- Тележка правой стойки при взлёте -->
+<animation>
+  <condition>
+    <greater-than>
+      <value>0</value>  
+      <property>gear/gear[2]/compression-2</property>
+    </greater-than>
+  </condition>
+  <type>rotate</type>
+  <object-name>RTang</object-name>
+  <property>gear/gear[2]/angle-1</property>
+  <!--<interpolation>
+    <entry><ind>    0.0</ind><dep>   0.0</dep></entry>
+    <entry><ind>    1.0</ind><dep>   9.0</dep></entry>
+  </interpolation>-->
+  <center>
+    <x-m>20.864</x-m>
+    <y-m>4.948</y-m>
+    <z-m>-1.607</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+ <type>spin</type>
+ <object-name>rotor2</object-name>
+ <property>/engines/engine[1]/n1</property>
+ <factor>120</factor>
+ <center>
+  <x-m>20.0</x-m>
+  <y-m>-2.468</y-m>
+  <z-m>1.7</z-m>
+ </center>
+ <axis>
+  <x>1</x>
+  <y>0</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+<!--<animation>
+  <type>rotate</type>
+  <object-name>NoseFrontRDoor</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>-90.0</dep>
+    </entry>
+    <entry>
+      <ind>0.1</ind>
+      <dep>-90.0</dep>
+    </entry>
+    <entry>
+      <ind>0.5</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>1.0</ind>
+      <dep>0.0</dep>
+    </entry>
+  </interpolation>
+ <axis>
+   <x1-m>3.457</x1-m>
+   <y1-m>0.343</y1-m>
+   <z1-m>0.186</z1-m>
+   <x2-m>4.547</x2-m>
+   <y2-m>0.337</y2-m>
+   <z2-m>0.153</z2-m>
+  </axis>
+ </animation>
+
+<animation>
+ <type>rotate</type>
+ <object-name>aileronoutr</object-name>
+ <property>/controls/flight/aileron</property>
+ <interpolation>
+                <entry><ind>    -1</ind><dep>   19</dep></entry>
+                <entry><ind>    0</ind><dep>    0</dep></entry>
+                <entry><ind>    1</ind><dep>    -19</dep></entry>
+ </interpolation>
+ <axis>
+    <x1-m>22.73</x1-m>
+    <y1-m>9.44</y1-m>
+    <z1-m>0.09</z1-m>
+    <x2-m>25.92</x2-m>
+    <y2-m>14.68</y2-m>
+    <z2-m>0.15</z2-m>
+ </axis>
+</animation>
+
+<animation>
+ <type>rotate</type>
+ <object-name>aileronoutl</object-name>
+ <property>/controls/flight/aileron</property>
+ <interpolation>
+                <entry><ind>    -1</ind><dep>   19</dep></entry>
+                <entry><ind>    0</ind><dep>    0</dep></entry>
+                <entry><ind>    1</ind><dep>    -19</dep></entry>
+ </interpolation>
+ <axis>
+    <x1-m>22.77</x1-m>
+    <y1-m>-9.37</y1-m>
+    <z1-m>0.08</z1-m>
+    <x2-m>25.96</x2-m>
+    <y2-m>-14.60</y2-m>
+    <z2-m>0.14</z2-m>
+ </axis>
+</animation>
+
+<animation>
+ <type>rotate</type>
+ <object-name>rudddrag</object-name>
+ <object-name>ruddertrim</object-name>
+ <object-name>object.178</object-name>
+ <object-name>object.179</object-name>
+ <property>/controls/flight/rudder</property>
+ <interpolation>
+                <entry><ind>    -1</ind><dep>   25</dep></entry>
+                <entry><ind>    0</ind><dep>    0</dep></entry>
+                <entry><ind>    1</ind><dep>    -25</dep></entry>
+ </interpolation>
+ <axis>
+    <x1-m>31.02</x1-m>
+    <y1-m>0.05</y1-m>
+    <z1-m>3.05</z1-m>
+    <x2-m>33.25</x2-m>
+    <y2-m>0.05</y2-m>
+    <z2-m>7.03</z2-m>
+ </axis>
+</animation>
+
+<animation>
+ <type>rotate</type>
+ <object-name>elevatorr</object-name>
+ <property>/controls/flight/elevator</property>
+ <interpolation>
+                <entry><ind>    -1</ind><dep>   22</dep></entry>
+                <entry><ind>    0</ind><dep>    0</dep></entry>
+                <entry><ind>    1</ind><dep>    -16</dep></entry>
+ </interpolation>
+ <axis>
+    <x1-m>33.37</x1-m>
+    <y1-m>0.29</y1-m>
+    <z1-m>7.41</z1-m>
+    <x2-m>36.75</x2-m>
+    <y2-m>5.81</y2-m>
+    <z2-m>7.39</z2-m>
+ </axis>
+</animation>
+
+<animation>
+ <type>rotate</type>
+ <object-name>elevatorl</object-name>
+ <property>/controls/flight/elevator</property>
+ <interpolation>
+                <entry><ind>    1</ind><dep>   16</dep></entry>
+                <entry><ind>    0</ind><dep>    0</dep></entry>
+                <entry><ind>    -1</ind><dep>   -22</dep></entry>
+ </interpolation>
+ <axis>
+    <x1-m>33.37</x1-m>
+    <y1-m>-0.20</y1-m>
+    <z1-m>7.40</z1-m>
+    <x2-m>36.76</x2-m>
+    <y2-m>-5.70</y2-m>
+    <z2-m>7.38</z2-m>
+ </axis>
+</animation>-->
+
+<!--<animation>
+  <type>rotate</type>
+  <object-name>Animation.068</object-name>
+  <object-name>Animation.056</object-name>
+  <property>gear/gear[1]/position-norm</property>
+ <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>91.0</dep>
+    </entry>
+    <entry>
+      <ind>0.4</ind>
+      <dep>91.0</dep>
+    </entry>
+    <entry>
+      <ind>0.7</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>1.0</ind>
+      <dep>0.0</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>20.281</x-m>
+   <y-m>-4.067</y-m>
+   <z-m>-1.378</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Animation.069</object-name>
+  <object-name>Animation.057</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>88</dep>
+    </entry>
+    <entry>
+      <ind>0.2</ind>
+      <dep>88</dep>
+    </entry>
+    <entry>
+      <ind>0.7</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>1.0</ind>
+      <dep>0.0</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>19.978</x-m>
+   <y-m>-5.624</y-m>
+   <z-m>-0.308</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>-->
+ 
+<!--<model>
+ <name>uvo</name>
+ <path>Aircraft/tu134/Instruments-3d/uvo/uvo_3d.xml</path>
+ <offsets>
+    <x-m>2.62</x-m>
+    <y-m>-0.45</y-m>
+    <z-m>1.85</z-m>
+ </offsets>
+</model>-->
+
+<!-- *****************Панель двигателей*************** -->
+<model>
+	<name>ite_vsu</name>
+	<path>Aircraft/tu134/Instruments-3d/ite/ite_vsu.xml</path>
+	<offsets>
+		<x-m>4.557</x-m>
+		<y-m>-0.372</y-m>
+		<z-m>1.737</z-m>
+		<heading-deg>90.0</heading-deg>
+	</offsets>
+</model>
+
+<model>
+	<name>vibr-1</name>
+	<path>Aircraft/tu134/Instruments-3d/vibr/vibr_1.xml</path>
+	<offsets>
+		<x-m>4.316</x-m>
+		<y-m>-0.370</y-m>
+		<z-m>1.677</z-m>
+		<heading-deg>90.0</heading-deg>
+	</offsets>
+</model>
+
+<model>
+	<name>vibr-2</name>
+	<path>Aircraft/tu134/Instruments-3d/vibr/vibr_2.xml</path>
+	<offsets>
+		<x-m>4.213</x-m>
+		<y-m>-0.367</y-m>
+		<z-m>1.727</z-m>
+		<heading-deg>90.0</heading-deg>
+	</offsets>
+</model>
+
+<model>
+	<name>ite_2-2</name>
+	<path>Aircraft/tu134/Instruments-3d/ite/ite-2t_2.xml</path>
+	<offsets>
+		<x-m>4.338</x-m>
+		<y-m>-0.371</y-m>
+		<z-m>1.762</z-m>
+		<heading-deg>90.0</heading-deg>
+	</offsets>
+</model>
+
+<model>
+	<name>iv-50p</name>
+	<path>Aircraft/tu134/Instruments-3d/switches/azs_dv-1.xml</path>
+	<offsets>
+		<x-m>4.379</x-m>
+		<y-m>-0.377</y-m>
+		<z-m>1.676</z-m>
+		<heading-deg>90.0</heading-deg>
+	</offsets>
+</model>
+
+<model>
+	<name>deice-1</name>
+	<path>Aircraft/tu134/Instruments-3d/termometr/deice_1.xml</path>
+	<offsets>
+		<x-m>4.486</x-m>
+		<y-m>-0.371</y-m>
+		<z-m>1.562</z-m>
+		<heading-deg>90.0</heading-deg>
+	</offsets>
+</model>
+
+<model>
+	<name>deice-2</name>
+	<path>Aircraft/tu134/Instruments-3d/termometr/deice_2.xml</path>
+	<offsets>
+		<x-m>4.396</x-m>
+		<y-m>-0.371</y-m>
+		<z-m>1.562</z-m>
+		<heading-deg>90.0</heading-deg>
+	</offsets>
+</model>
+
+<model>
+	<name>deice-3</name>
+	<path>Aircraft/tu134/Instruments-3d/termometr/deice_3.xml</path>
+	<offsets>
+		<x-m>4.305</x-m>
+		<y-m>-0.371</y-m>
+		<z-m>1.562</z-m>
+		<heading-deg>90.0</heading-deg>
+	</offsets>
+</model>
+
+<model>
+	<name>tablo_dv_1</name>
+	<path>Aircraft/tu134/Instruments-3d/tablo/tablo_dv_1.xml</path>
+	<offsets>
+		<x-m>4.593</x-m>
+		<y-m>-0.370</y-m>
+		<z-m>1.551</z-m>
+		<heading-deg>90.0</heading-deg>
+	</offsets>
+</model>
+
+<model>
+	<name>full_heat_azs</name>
+	<path>Aircraft/tu134/Instruments-3d/switches/full_heat_azs.xml</path>
+	<offsets>
+		<x-m>4.099</x-m>
+		<y-m>-0.374</y-m>
+		<z-m>1.314</z-m>
+		<heading-deg>90.0</heading-deg>
+	</offsets>
+</model>
+
+
+<model>
+	<name>sw-92</name>
+	<path>Aircraft/tu134/Instruments-3d/switches/azs1-26.xml</path>
+	<offsets>
+		<x-m>1.928</x-m>
+		<y-m>0.411</y-m>
+		<z-m>1.408</z-m>
+		<pitch-deg>-1.075</pitch-deg>
+		<heading-deg>-99.830</heading-deg>
+	</offsets>
+</model>
+
+<model>
+	<name>sw-92</name>
+	<path>Aircraft/tu134/Instruments-3d/switches/azs1-27.xml</path>
+	<offsets>
+		<x-m>1.956</x-m>
+		<y-m>0.406</y-m>
+		<z-m>1.408</z-m>
+		<pitch-deg>-1.075</pitch-deg>
+		<heading-deg>-99.830</heading-deg>
+	</offsets>
+</model>
+
+<model>
+  <name>sw-92</name>
+  <path>Aircraft/tu134/Instruments-3d/switches/azs1-11.xml</path>
+  <offsets>
+    <x-m>2.179</x-m>
+    <y-m>0.370</y-m>
+    <z-m>1.559</z-m>
+    <pitch-deg>-1.075</pitch-deg>
+    <heading-deg>-99.830</heading-deg>
+  </offsets>
+</model>
+<!-- **********Электропанель********** -->
+<model>
+	<name>ampermeter-1_1</name>
+	<path>Aircraft/tu134/Instruments-3d/electrical/amp-1_1.xml</path>
+	<offsets>
+	 <x-m>2.212</x-m>
+	 <y-m>-0.356</y-m>
+	 <z-m>1.596</z-m>
+	 <heading-deg>102.755</heading-deg>
+	</offsets>
+</model>
+
+<model>
+  <name>ampermeter-1_2</name>
+  <path>Aircraft/tu134/Instruments-3d/electrical/amp-1_2.xml</path>
+  <offsets>
+    <x-m>2.165</x-m>
+    <y-m>-0.367</y-m>
+    <z-m>1.596</z-m>
+    <heading-deg>102.755</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>ampermeter-2_1</name>
+  <path>Aircraft/tu134/Instruments-3d/electrical/amp-2_1.xml</path>
+  <offsets>
+    <x-m>2.118</x-m>
+    <y-m>-0.377</y-m>
+    <z-m>1.596</z-m>
+    <heading-deg>102.755</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>ampermeter-2_2</name>
+  <path>Aircraft/tu134/Instruments-3d/electrical/amp-2_2.xml</path>
+  <offsets>
+    <x-m>2.071</x-m>
+    <y-m>-0.387</y-m>
+    <z-m>1.596</z-m>
+    <heading-deg>102.755</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>akk_switch-1</name>
+  <path>Aircraft/tu134/Instruments-3d/switches/akk_azs_1.xml</path>
+  <offsets>
+    <x-m>1.936</x-m>
+    <y-m>-0.415</y-m>
+    <z-m>1.382</z-m>
+    <heading-deg>102.755</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>akk_switch-1</name>
+  <path>Aircraft/tu134/Instruments-3d/switches/akk_azs_2.xml</path>
+  <offsets>
+    <x-m>1.957</x-m>
+    <y-m>-0.410</y-m>
+    <z-m>1.382</z-m>
+    <heading-deg>102.755</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>akk_switch-1</name>
+  <path>Aircraft/tu134/Instruments-3d/switches/on_bus_azs.xml</path>
+  <offsets>
+    <x-m>1.985</x-m>
+    <y-m>-0.404</y-m>
+    <z-m>1.382</z-m>
+    <heading-deg>102.755</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>akk_lamp</name>
+  <path>Aircraft/tu134/Instruments-3d/lamps/akk_lamp.xml</path>
+  <offsets>
+    <x-m>1.963</x-m>
+    <y-m>-0.410</y-m>
+    <z-m>1.423</z-m>
+    <heading-deg>102.755</heading-deg>
+  </offsets>
+</model>
+
+<model>
+	<name></name>
+        <path>Aircraft/tu134/Instruments-3d/switches/gyro_on_azs.xml</path>
+	<offsets>
+		<x-m>2.154</x-m>
+		<y-m>-0.367</y-m>
+		<z-m>1.290</z-m>
+                <heading-deg>102.755</heading-deg>
+	</offsets>
+</model>
+<!-- Подсветка панели приборов --> 
+<animation>
+   <type>material</type>
+   <object-name>Plane.004</object-name>
+   <emission>
+     <red-prop>/tu134/light/panel/shturman_ext-red</red-prop>
+     <green-prop>tu134/light/panel/shturman_ext-green</green-prop>
+     <blue-prop>tu134/light/panel/shturman_ext-blue</blue-prop>
+    </emission>
+</animation>
+
+<!-- Подсветка кабины --> 
+<animation>
+   <type>material</type>
+   <object-name>WindowInt</object-name>
+   <emission>
+	<red>0.9</red>
+ 	<green>0.25</green>
+ 	<blue>0.2</blue>
+	<factor-prop>/tu134/controls/switches/map-lights</factor-prop>
+    </emission>
+</animation>
+
+<!-- -->
+
+<!--
+  КРЫЛО
+  Отклонение внутренних закрылков   0 10 15 20 25 38
+  Отклонение внешних    закрылков   0  9 ?? 18 ?? 35
+  Отклонение элеронов   19 вверх 19 вниз
+  Отклонение триммеров элерона  3 вверх 3 вниз
+  Отклонение флетнеров элерона  6 вверх 6 вниз
+-->
+<!-- Левое полукрыло -->
+
+<animation>
+    <type>rotate</type>
+    <!-- элерон -->
+    <!--<object-name>aileronl</object-name>
+    <object-name>DrawCall42_c7b4c377.d</object-name>
+    <object-name>DrawCall44_c7b4c377.d</object-name>-->
+    <object-name>Group_LeftAileron</object-name>
+    <property>controls/flight/aileron</property>
+    <factor>-19.0</factor>
+
+    <axis>
+        <x1-m>23.123</x1-m>
+        <y1-m>-9.367</y1-m>
+        <z1-m>0.101</z1-m>
+
+        <x2-m>26.179</x2-m>
+        <y2-m>-14.613</y2-m>
+        <z2-m>0.053</z2-m>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>DrawCall42_c7b4c377.d</object-name> <!-- флетнер -->
+    <object-name>DrawCall44_c7b4c377.d</object-name> <!-- триммер флетнер -->
+    <property>controls/flight/aileron</property>
+    <factor>6.0</factor>
+    <axis>
+        <x1-m>24.201</x1-m> <y1-m> -9.37 </y1-m> <z1-m>0.1  </z1-m>
+        <x2-m>25.842</x2-m> <y2-m>-12.824</y2-m> <z2-m>0.071</z2-m>
+    </axis>
+</animation>
+<animation> <!-- дополнительно учитываем триммирование -->
+    <type>rotate</type>
+    <object-name>DrawCall44_c7b4c377.d</object-name> <!-- триммер флетнер -->
+    <property>controls/flight/aileron-trim</property>
+    <factor>-3.0</factor> <!-- проверить знак! -->
+    <axis>
+        <x1-m>24.201</x1-m> <y1-m>-9.37  </y1-m> <z1-m>0.1  </z1-m>
+        <x2-m>25.842</x2-m> <y2-m>-12.824</y2-m> <z2-m>0.071</z2-m>
+    </axis>
+</animation>
+
+<animation>
+    <type>translate</type>
+    <object-name>flapoutl</object-name>
+    <object-name>DrawCall42_c7b4c377</object-name>
+    <property>/sim/main/x-offset-m</property>
+    <axis>
+    	<x>1</x>
+    </axis>
+</animation>
+
+<animation>
+    <type>translate</type>
+    <object-name>flapoutl</object-name>
+    <object-name>DrawCall42_c7b4c377</object-name>
+    <property>/sim/main/z-offset-m</property>
+    <axis>
+    	<z>1</z>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>flapoutl</object-name> <!-- внешний закрылок -->
+    <property>/fdm/jsbsim/fcs/flap-outer-pos-deg</property>
+    <axis>
+        <x1-m>22.935</x1-m>
+        <y1-m>-9.737</y1-m>
+        <z1-m>0.035</z1-m>
+        <x2-m>20.664</x2-m>
+        <y2-m>-5.355</y2-m>
+        <z2-m>0.059</z2-m>
+    </axis>
+</animation>
+
+<animation>
+    <type>translate</type>
+    <object-name>flapinl</object-name>
+    <object-name>flapinr</object-name>
+    <object-name>object.059</object-name>
+    <property>/fdm/jsbsim/fcs/flap-pos-deg</property>
+    <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>10.0</ind>
+      <dep>0.12</dep>
+    </entry>
+    <entry>
+      <ind>20.0</ind>
+      <dep>0.24</dep>
+    </entry>
+    <entry>
+      <ind>38.0</ind>
+      <dep>0.5</dep>
+    </entry>
+  </interpolation>
+    <axis>
+    	<x>1</x>
+    </axis>
+</animation>
+
+<animation>
+    <type>translate</type>
+    <object-name>flapinl</object-name>
+    <object-name>flapinr</object-name>
+    <object-name>object.059</object-name>
+    <property>/fdm/jsbsim/fcs/flap-pos-deg</property>
+    <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>10.0</ind>
+      <dep>0.12</dep>
+    </entry>
+    <entry>
+      <ind>20.0</ind>
+      <dep>0.18</dep>
+    </entry>
+    <entry>
+      <ind>38.0</ind>
+      <dep>0.22</dep>
+    </entry>
+  </interpolation>
+    <axis>
+    	<z>1</z>
+    </axis>
+</animation>
+
+
+
+
+<animation>
+    <type>rotate</type>
+    <object-name>flapinl</object-name> <!-- левый внутренний закрылок -->
+    <object-name>flapinr</object-name> <!-- правый внутренний закрылок -->
+    <property>/fdm/jsbsim/fcs/flap-pos-deg</property>
+    <center>
+        <x-m>19.927</x-m>
+        <y-m>-1.568</y-m>
+        <z-m>0.001</z-m>
+    </center>
+    <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+    </axis>
+</animation>
+
+<!-- Правое полукрыло - координаты взяты приблизительно! зеркально отражены для левого полукрыла -->
+
+<animation>
+    <type>rotate</type>
+    <!-- элерон -->
+    <!--<object-name>aileronr</object-name>
+    <object-name>DrawCall21_c7b4c377.d</object-name>
+    <object-name>DrawCall19_c7b4c377.d</object-name>-->
+    <object-name>Group_RightAileron</object-name>
+    <property>controls/flight/aileron</property>
+    <factor>-19.0</factor>
+
+    <axis>
+        <x1-m>23.123</x1-m>
+        <y1-m>9.367</y1-m>
+        <z1-m>0.101</z1-m>
+
+        <x2-m>26.179</x2-m>
+        <y2-m>14.613</y2-m>
+        <z2-m>0.053</z2-m>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>DrawCall21_c7b4c377.d</object-name> <!-- флетнер -->
+    <object-name>DrawCall19_c7b4c377.d</object-name> <!-- триммер флетнер -->
+    <property>controls/flight/aileron</property>
+    <factor>6</factor>
+    <axis>
+        <x1-m>24.201</x1-m> <y1-m> 9.37 </y1-m> <z1-m>0.1  </z1-m>
+        <x2-m>25.842</x2-m> <y2-m>12.824</y2-m> <z2-m>0.071</z2-m>
+    </axis>
+</animation>
+<animation> <!-- учитываем триммирование -->
+    <type>rotate</type>
+    <object-name>DrawCall19_c7b4c377.d</object-name> <!-- триммер флетнер -->
+    <property>controls/flight/aileron-trim</property>
+    <factor>-3</factor>
+    <axis>
+        <x1-m>24.201</x1-m> <y1-m> 9.37 </y1-m> <z1-m>0.1  </z1-m>
+        <x2-m>25.842</x2-m> <y2-m>12.824</y2-m> <z2-m>0.071</z2-m>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>flapoutr</object-name> <!-- внешний закрылок -->
+    <property>/fdm/jsbsim/fcs/flap-outer-pos-deg</property>
+    <factor>-1</factor>
+    <axis>
+        <x1-m>22.935</x1-m>
+        <y1-m>9.737</y1-m>
+        <z1-m>0.035</z1-m>
+        <x2-m>20.664</x2-m>
+        <y2-m>5.355</y2-m>
+        <z2-m>0.059</z2-m>
+    </axis>
+</animation>
+
+<!--
+Хвостовое оперение
+Руль направления:          25.0 вправо 25.0 влево
+Триммеры руля направления:  3.5 вправо  3.5 влево
+Флетнеры руля направления: 17.5 вправо 17.5 влево
+
+Руль высоты:          22 вверх 16 вниз
+Триммеры руля высоты:  8 вверх  8 вниз (тросовое управление)
+                       4 вверх  4 вниз (электрическое управление)
+-->
+
+<animation>
+  <type>rotate</type>
+  <object-name>Rudder</object-name>
+  <object-name>RudderTrim</object-name>
+  <property>fdm/jsbsim/fcs/rudder-pos-deg</property>
+  <!--<factor>25</factor>-->
+  <axis>
+    <x1-m>31.24</x1-m>
+    <y1-m>0.049</y1-m>
+    <z1-m>2.93</z1-m>
+    <x2-m>33.399</x2-m>
+    <y2-m>0.046</y2-m>
+    <z2-m>6.831</z2-m>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>rudderl</object-name> <!-- левый руль высоты -->
+  <object-name>DrawCal128_7e996a.001</object-name>
+  <property>fdm/jsbsim/fcs/elevator-pos-deg</property>
+  <axis>
+    <x1-m>37.305</x1-m> <y1-m>-6.118</y1-m> <z1-m>7.376</z1-m>
+    <x2-m>33.951</x2-m> <y2-m>-0.164</y2-m> <z2-m>7.28 </z2-m>
+  </axis>
+</animation>
+
+<animation> <!-- координаты взяты приблизительно - зеркально отражены -->
+  <type>rotate</type>
+  <object-name>rudderr</object-name> <!-- правый руль высоты -->
+  <object-name>DrawCal128_7e996a.002</object-name>
+  <property>controls/flight/elevator</property>
+  <axis>
+    <x1-m>37.305</x1-m> <y1-m>6.118</y1-m> <z1-m>7.376</z1-m>
+    <x2-m>33.951</x2-m> <y2-m>0.164</y2-m> <z2-m>7.28 </z2-m>
+  </axis>
+  <interpolation>
+    <entry> <ind>-1.0</ind> <dep> 22</dep> </entry>
+    <entry> <ind> 0.0</ind> <dep>  0</dep> </entry>
+    <entry> <ind> 1.0</ind> <dep>-16</dep> </entry>
+  </interpolation>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>object.316</object-name>
+    <object-name>object.314</object-name>
+    <object-name>object.313</object-name>
+    <property>fdm/jsbsim/fcs/elevator-pos-deg</property>
+    <factor>1</factor> <!-- незвестны углы отклонения штурвала (!) -->
+    <axis>
+        <x> 0</x>
+        <y>-1</y>
+        <z> 0</z>
+    </axis>
+    <center>
+        <x-m>2.986</x-m>
+        <y-m>0</y-m>
+        <z-m>0.844</z-m>
+    </center>
+</animation>
+<animation>
+    <type>rotate</type>
+    <object-name>object.314</object-name> <!-- левый штурвал -->
+    <property>controls/flight/aileron</property>
+    <factor>120.0</factor>
+    <axis>
+        <x1-m> 3.013</x1-m>
+        <y1-m>-0.643</y1-m>
+        <z1-m> 1.708</z1-m>
+        <x2-m> 2.910</x2-m>
+        <y2-m>-0.644</y2-m>
+        <z2-m> 1.695</z2-m>
+    </axis>
+</animation>
+<animation>
+    <type>rotate</type>
+    <object-name>object.313</object-name> <!-- правый штурвал -->
+    <property>controls/flight/aileron</property>
+    <factor>120.0</factor>
+    <axis>
+        <x1-m>3.010</x1-m>
+        <y1-m>0.660</y1-m>
+        <z1-m>1.709</z1-m>
+        <x2-m>2.909</x2-m>
+        <y2-m>0.660</y2-m>
+        <z2-m>1.697</z2-m>
+    </axis>
+</animation>
+
+<animation>
+    <type>spin</type>
+    <object-name>object.020</object-name>
+    <property>tu134/fan1_speed</property>
+    <factor>1.0</factor>
+    <axis>
+        <x1-m>2.904</x1-m>
+        <y1-m>-0.370</y1-m>
+        <z1-m>2.216</z1-m>
+        <x2-m>2.793</x2-m>
+        <y2-m>-0.290</y2-m>
+        <z2-m>2.294</z2-m>
+    </axis>
+</animation>
+
+<!-- Door animation -->
+<animation>
+    <type>rotate</type>
+    <object-name>door</object-name>
+    <property>tu134/pass-door/position-norm</property>
+    <factor>90.0</factor>
+    <center>
+        <x-m> 8.7</x-m>
+        <y-m>-1.3</y-m>
+        <z-m> 1.5</z-m>
+    </center>
+    <axis>
+        <x>0.0</x>
+        <y>0.0</y>
+        <z>1.0</z>
+    </axis>
+</animation>
+
+</PropertyList>
